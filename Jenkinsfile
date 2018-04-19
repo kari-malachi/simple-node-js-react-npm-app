@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ec2agent'
+        label 'ec2spotagent'
     }
     environment {
         CI = 'true' 
