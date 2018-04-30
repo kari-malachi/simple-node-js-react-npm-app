@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'ec2spotagent'
+        label 'kari-ecs-fargate'
     }
     environment {
         CI = 'true' 
