@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'kari-cluster-scratch'
+        label 'kari-cluster-scratch-loadbalanced-node6alpine'
     }
     environment {
         CI = 'true' 
