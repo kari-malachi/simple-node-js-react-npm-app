@@ -1,11 +1,17 @@
 pipeline {
     agent {
-        label 'kari-cluster-scratch-loadbalanced-node6alpine'
+        label 'kari-cluster-scratch-loadbalanced'
     }
     environment {
         CI = 'true' 
     }
     stages {
+        agent {
+            docker {
+                image 'node:6-alpine' 
+                args '-p 3000:3000 -u root:root' 
+            }
+        }
         stage('Build') { 
             steps {
                 sh 'npm install' 
