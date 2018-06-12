@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'kari-cluster-scratch'
+        label 'basic-ecs-agents'
     }
     environment {
         CI = 'true' 
